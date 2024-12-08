@@ -1,16 +1,145 @@
+html,
 body {
-    font-family: "Inter";
+  font-family: "Inter";
+  margin: 0;
+  padding: 0;
+  width: 100vw; /* You can use this or width: 100%; */
+  height: 100%;
+  box-sizing: border-box;
 }
 
-h2 {
-    font-size: 1.2rem;
-    font-weight: 400;
+.content {
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+/* Navigation */
+
+.main-content {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+.selected-link {
+    background-color: yellow;
+}
+
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px 0px;
+}
+
+.left-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 67%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.right-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggles {
+  text-transform: uppercase;
+}
+
+#markup-toggle {
+  margin: 4px 0px;
+  font-size: 0.8rem;
+  display: inline-block;
+  cursor: pointer;
+  padding: 4px;
+  border: 1px black solid;
+  border-radius: 4px;
 }
 
 .markup {
-    font-family: monospace;
-    font-weight: normal;
+  font-family: monospace;
+  font-weight: normal;
+  font-size: 1rem;
+  padding: 0px 4px;
+  color: blue;
+}
+
+/* Weeks */
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+h4 {
     font-size: 1rem;
-    padding: 0px 4px;
-    color: blue;
+  font-weight: 400;
+}
+
+/* Collapsible */
+
+details > summary span.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+  margin-left: auto;
+}
+
+details summary h2::after {
+  content: "  +";
+}
+
+details[open] summary h2::after {
+  content: "  -";
+}
+
+details[open] summary {
+  /* color: var(--red-accent-80); */
+}
+
+details[open] .session-detail {
+  animation: sweep 1s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+summary {
+  display: flex;
+  cursor: pointer;
+  margin: 8px 0;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details {
+  user-select: none;
+}
+
+/* Weeks */
+
+.week {
+    
 }
