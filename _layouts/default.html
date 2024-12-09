@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title | default: site.title }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css' | relative_url }}"
+    />
+  </head>
+  <body>
+    <!-- Static Navigation Bar -->
+    <header>
+      <nav>
+        <div class="nav">
+          <div class="left-nav">
+            <div class="nav-links">
+                <div class="icon"> <a href="{{ '/' | relative_url }}">⦿</a></div>
+              <div class="nav-link" id="agenda">
+                <a href="{{ '/pages/agenda' | relative_url }}">Agenda</a>
+              </div>
+
+              <div class="nav-link" id="syllabus">
+                <a href="{{ '/pages/syllabus' | relative_url }}">Syllabus</a>
+              </div>
+              <div class="nav-link" id="exercises">Exercises</div>
+              <div class="nav-link" id="people">
+                <a href="{{ '/pages/people' | relative_url }}">People</a>
+              </div>
+              <div class="nav-link" id="projects">Projects</div>
+              <div class="nav-link" id="resources">Resources</div>
+            </div>
+            <div class="toggles hide-toggle">
+              <div id="markup-toggle">Show Markup</div>
+            </div>
+          </div>
+          <div class="right-nav">
+            <div>Instructor: Divya Mehra</div>
+            <div>Email: dm4924@nyu.edu</div>
+            <div>Link: GitHub</div>
+            <div>Link: Figma</div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      {{ content }}
+      <!-- This is where page content will be injected -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <!-- <p>© {{ site.time | date: "%Y" }} {{ site.author }}</p> -->
+    </footer>
+    <!-- <script src="{{ '/assets/js/script.js' | relative_url }}"></script> -->
+  </body>
+</html>

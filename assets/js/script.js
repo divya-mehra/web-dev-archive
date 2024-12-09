@@ -20,28 +20,51 @@ let toggleMarkup = () => {
 markupToggle.addEventListener("click", toggleMarkup);
 
 // Change sections
+let navLinkNames = ["syllabus", "agenda", "people", "resources", "projects", "exercises"]
+let navLinks = document.querySelectorAll(".nav-link");
+let mainContent = document.querySelectorAll(".main-content");
 
-let sections = ["agenda", "syllabus"];
 
 let changeSection = (element) => {
   element.target.classList.toggle("selected-link");
   let el = document.querySelector(`#${element.target.id}-content`);
   el.classList.toggle("show");
-  document.querySelectorAll(".main-content").forEach((e) => {
+  mainContent.forEach((e) => {
     if (e != el) {
       e.classList.remove("show");
     }
   });
-  document.querySelectorAll(".nav-link").forEach((e) => {
+  navLinks.forEach((e) => {
     if (e != element.target) {
       e.classList.remove("selected-link");
     }
   });
+  updateToggle();
+
+  noneSelected
+    ? toggles.classList.add("hide-toggle")
+    : toggles.classList.remove("hide-toggle");
 };
 
-document.querySelector("#agenda").addEventListener("click", (e) => {
-  changeSection(e);
-});
-document.querySelector("#syllabus").addEventListener("click", (e) => {
-  changeSection(e);
-});
+navLinkNames.forEach((name) => {
+    document.querySelector(`#${name}`).addEventListener("click", (e) => {
+        changeSection(e);
+      });
+})
+
+// Show/Hide Toggles
+
+let toggles = document.querySelector(".toggles");
+let noneSelected = true;
+
+let updateToggle = () => {
+  noneSelected = true; // Reset the flag before each check
+  navLinks.forEach((e) => {
+    if (e.classList.contains("selected-link")) {
+      noneSelected = false;
+    }
+    console.log(noneSelected);
+  });
+
+  return noneSelected;
+};
