@@ -4,9 +4,11 @@ body {
   font-family: "Inter";
   margin: 0;
   padding: 0;
-  width: 100vw; /* You can use this or width: 100%; */
+  
   height: 100%;
   box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 nav {
@@ -41,7 +43,7 @@ a {
 .nav {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 8px 0px;
 }
 
@@ -107,8 +109,8 @@ h2 {
 }
 
 h4 {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 0.8rem;
+  font-weight: 600;
   text-transform: uppercase;
 }
 

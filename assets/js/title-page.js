@@ -1,40 +1,60 @@
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+// separate letters
 
-const data = [
-  "Digital Humanities",
-  "Web Development",
-  "Internet Archives",
-  "Design Principles",
-];
+let words = document.querySelectorAll('.word')
 
-const svg = d3.select("svg");
+words.forEach((word) => {
+    let wordText = word.textContent.trim();
+    let wordHtml =  '';
 
-const text = svg
-  .selectAll("text")
-  .data(data)
-  .enter()
-  .append("text")
-  .attr("x", 0)
-  .attr("y", (d, i) => 10 + i * 10)
-//   .attr("font-size", "24") // Initial font size
-  .attr("font-family", "Inter")
-  .text((d) => d)
-  .style("fill", "black")
-  .style("text-transform", "uppercase");
+    for (let i = 0; i <wordText.length; i++) {
+        let char = wordText[i]
 
-// Calculate the text width and adjust the font size accordingly
-const bbox = text.node().getBBox();
-const width = bbox.width;
-const height = bbox.height;
+        if(char === " ") {
+            // wordHtml+= " "
+        } else {
+            wordHtml += `<span class="letter">${char}</span>`
+        }
+    }
 
-// Scale font size to fill the container
-const svgWidth = parseInt(svg.style("width"));
-const svgHeight = parseInt(svg.style("height"));
+    word.innerHTML = wordHtml;
+})
 
-const scale = Math.min(svgWidth / width, svgHeight / height);
-text.attr("font-size", scale * 1); // Adjust font-size based on scale factor
 
-text.transition()
-  .duration(1000)
-  .attr("y", 10)
-  .style("fill", "red");
+let letters = document.querySelectorAll('.letter')
+
+let update = (e) => {
+    e.target.classList.toggle("added")
+    
+}
+
+letters.forEach((letter) => {
+    letter.addEventListener('mouseenter', update);  // When an element is clicked, run the update function
+});
+
+// import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+
+// const data = ["Digital Humanities"];
+// const letterPaths = [
+//   "M5.08808 27.0001H0.894897L10.3168 0.818237H14.8807L24.3026 27.0001H20.1094L12.7074 5.57392H12.5029L5.08808 27.0001Z",
+// ];
+
+// // Define final path (morph into a different shape, for example a slightly modified 'A')
+// const finalPath = "M0 26.1818H4.19318H23.4077L13.9858 0H9.42188L0 26.1818Z";
+
+
+// const svg = d3.select("svg");
+
+// const path = svg
+//   .append("path")
+//   .attr("d", letterPaths[0])  // Use the "A" path data
+//   .attr("fill", "black");
+  
+  
+
+// // Animate the letter path
+// setTimeout(() => {
+//     path.transition()
+//       .duration(2000)  // Transition duration
+//       .attr("d",   finalPath,
+//       );  // Morph to a different path
+//   }, 1000);  // 3000 milliseconds delay before starting the transition
