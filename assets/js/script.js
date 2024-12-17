@@ -1,7 +1,11 @@
 let markupToggle = document.querySelector("#markup-toggle");
 let markupElements = document.querySelectorAll(".markup");
 
+let timelineToggle = document.querySelector("#timeline-toggle");
+let timelineElements = document.querySelectorAll(".timeline");
+
 let toggleMarkup = () => {
+  console.log("toggled")
   if (markupToggle.classList.contains("show")) {
     markupToggle.classList.toggle("show");
     markupToggle.textContent = "Show Markup";
@@ -17,7 +21,28 @@ let toggleMarkup = () => {
   }
 };
 
+let toggleTimeline = () => {
+  console.log("toggled timeline")
+  if (timelineToggle.classList.contains("show")) {
+    timelineToggle.classList.toggle("show");
+    timelineToggle.textContent = "Show Timeline";
+    timelineElements.forEach((el) => {
+      el.style.display = "none";
+    });
+  } else {
+    timelineToggle.classList.toggle("show");
+    timelineElements.forEach((el) => {
+      el.style.display = "inline-block";
+    });
+    timelineToggle.textContent = "Hide Timeline";
+  }
+};
+
 markupToggle.addEventListener("click", toggleMarkup);
+timelineToggle.addEventListener("click", toggleTimeline);
+
+
+
 
 // Change sections
 let navLinkNames = ["syllabus", "agenda", "people", "resources", "projects", "exercises"]
@@ -46,11 +71,6 @@ let changeSection = (element) => {
     : toggles.classList.remove("hide-toggle");
 };
 
-navLinkNames.forEach((name) => {
-    document.querySelector(`#${name}`).addEventListener("click", (e) => {
-        changeSection(e);
-      });
-})
 
 // Show/Hide Toggles
 

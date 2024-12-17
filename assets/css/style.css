@@ -1,5 +1,6 @@
 html,
 body {
+  cursor: default;
   font-family: "Inter";
   margin: 0;
   padding: 0;
@@ -13,7 +14,6 @@ nav {
   padding: 24px;
 }
 
-
 main {
   box-sizing: border-box;
   padding: 24px;
@@ -21,16 +21,12 @@ main {
 
 /* Navigation */
 
-.main-content {
+/* .main-content {
   display: none;
-}
+} */
 
 .show {
   display: inline-block;
-}
-
-.hide-toggle {
-  visibility: hidden;
 }
 
 a {
@@ -63,7 +59,6 @@ a {
 .nav-links {
   display: flex;
   gap: 24px;
-  
 }
 
 .nav-link {
@@ -75,12 +70,8 @@ a {
   flex-direction: column;
 }
 
-.toggles {
+.toggles > * {
   text-transform: uppercase;
-}
-
-#markup-toggle {
-  
   font-size: 0.8rem;
   display: inline-block;
   cursor: pointer;
@@ -88,6 +79,15 @@ a {
   border: 1px black solid;
   border-radius: 4px;
 }
+/* 
+#markup-toggle {
+  font-size: 0.8rem;
+  display: inline-block;
+  cursor: pointer;
+  padding: 4px;
+  border: 1px black solid;
+  border-radius: 4px;
+} */
 
 .markup {
   display: none;
@@ -112,6 +112,14 @@ h4 {
   text-transform: uppercase;
 }
 
+.inactive {
+  color: #969595;
+}
+
+.inactive summary {
+  cursor: default;
+}
+
 /* Collapsible */
 
 details > summary span.icon {
@@ -121,12 +129,28 @@ details > summary span.icon {
   margin-left: auto;
 }
 
+details summary h2 {
+  width: 67%;
+  display: grid;
+  grid-template-columns: 3fr 0.1fr 0.1fr;
+}
+
 details summary h2::after {
   content: "  +";
+  /* font-size: 1.4rem; */
+  text-align: center;
+  vertical-align: middle;
+}
+
+.timeline {
+  /* font-size: 1.4rem; */
+  text-align: center;
+  vertical-align: middle;
 }
 
 details[open] summary h2::after {
   content: "  -";
+  font-size: 1.4rem;
 }
 
 details[open] summary {
@@ -164,4 +188,10 @@ details {
 
 ul {
   padding-left: 8px;
+}
+
+/* PAGE: Agenda */
+
+.all-weeks {
+  /* width: 50%; */
 }

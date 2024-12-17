@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ page.title | default: site.title }}</title>
+    <title>{{ site.title }}</title>
     <link
       rel="stylesheet"
       href="{{ '/assets/css/style.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/title-page.css' | relative_url }}"
     />
   </head>
   <body>
@@ -16,11 +20,10 @@
         <div class="nav">
           <div class="left-nav">
             <div class="nav-links">
-                <div class="icon"> <a href="{{ '/' | relative_url }}">⦿</a></div>
+              <div class="icon"><a href="{{ '/' | relative_url }}">⦿</a></div>
               <div class="nav-link" id="agenda">
                 <a href="{{ '/pages/agenda' | relative_url }}">Agenda</a>
               </div>
-
               <div class="nav-link" id="syllabus">
                 <a href="{{ '/pages/syllabus' | relative_url }}">Syllabus</a>
               </div>
@@ -31,15 +34,21 @@
               <div class="nav-link" id="projects">Projects</div>
               <div class="nav-link" id="resources">Resources</div>
             </div>
-            <div class="toggles hide-toggle">
+            {% if page.url == '/pages/agenda.html' or page.url ==
+            '/pages/syllabus.html' %}
+
+            <div class="toggles">
               <div id="markup-toggle">Show Markup</div>
+              <div id="timeline-toggle">Show Timeline</div>
             </div>
+            {% endif %}
           </div>
           <div class="right-nav">
             <div>Instructor: Divya Mehra</div>
             <div>Email: dm4924@nyu.edu</div>
             <div>Link: GitHub</div>
             <div>Link: Figma</div>
+            <div>Link: CodePen</div>
           </div>
         </div>
       </nav>
@@ -52,9 +61,10 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-      <!-- <p>© {{ site.time | date: "%Y" }} {{ site.author }}</p> -->
-    </footer>
-    <!-- <script src="{{ '/assets/js/script.js' | relative_url }}"></script> -->
+    <!-- <footer>
+      <p>© {{ site.time | date: "%Y" }} {{ site.author }}</p>
+    </footer> -->
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/title-page.js' | relative_url }}" type="module"></script>
   </body>
 </html>
