@@ -26,13 +26,15 @@ let toggleTimeline = () => {
   if (timelineToggle.classList.contains("show")) {
     timelineToggle.classList.toggle("show");
     timelineToggle.textContent = "Show Timeline";
+    console.log("yes")
     timelineElements.forEach((el) => {
-      el.style.display = "none";
+      el.style.visibility = "hidden";
     });
   } else {
     timelineToggle.classList.toggle("show");
     timelineElements.forEach((el) => {
-      el.style.display = "inline-block";
+      el.style.visibility = "visible";
+      // el.style.display = "inline-block";
     });
     timelineToggle.textContent = "Hide Timeline";
   }

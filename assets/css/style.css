@@ -9,16 +9,19 @@ body {
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
+  font-size: 1rem;
+
+  background-color: #fdfbf3;
 }
 
 nav {
   box-sizing: border-box;
-  padding: 24px;
+  padding: 16px 24px;
 }
 
 main {
   box-sizing: border-box;
-  padding: 24px;
+  padding: 16px 24px;
 }
 
 /* Navigation */
@@ -29,6 +32,7 @@ main {
 
 .show {
   display: inline-block;
+  visibility: visible;
 }
 
 a {
@@ -45,6 +49,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 8px 0px;
+  font-family: monospace;
 }
 
 .left-nav {
@@ -61,6 +66,7 @@ a {
 .nav-links {
   display: flex;
   gap: 24px;
+  
 }
 
 .nav-link {
@@ -96,20 +102,32 @@ a {
   font-family: monospace;
   font-weight: normal;
   text-transform: none;
-  font-size: 1em;
+  font-size: 0.9rem;
   padding: 0px 4px;
   color: blue;
 }
 
 /* Weeks */
 
-h2 {
-  font-size: 1.2rem;
+h1 {
+  font-family: monospace;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 8px;
   font-weight: 400;
+  
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: "Inter";
+  margin: 0;
 }
 
 h4 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -129,25 +147,29 @@ details > summary span.icon {
   height: 24px;
   transition: all 0.3s;
   margin-left: auto;
+  margin: 0;
 }
 
 details summary h2 {
-  width: 67%;
-  display: grid;
-  grid-template-columns: 3fr 0.1fr 0.1fr;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* display: grid; */
+  /* grid-template-columns: 3fr 0.1fr 0.1fr; */
+  margin: 0;
 }
 
 details summary h2::after {
   content: "  +";
-  /* font-size: 1.4rem; */
-  text-align: center;
-  vertical-align: middle;
+  font-size: 1.4rem;
+  /* text-align: center; */
+  /* vertical-align: middle; */
 }
 
 .timeline {
-  /* font-size: 1.4rem; */
-  text-align: center;
-  vertical-align: middle;
+  font-size: 1.4rem;
+  margin: 8px 0;
+  visibility: hidden;
 }
 
 details[open] summary h2::after {
@@ -195,5 +217,10 @@ ul {
 /* PAGE: Agenda */
 
 .all-weeks {
-  /* width: 50%; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 48px;
 }
+
+
+
