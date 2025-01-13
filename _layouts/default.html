@@ -27,12 +27,17 @@
               <div class="nav-link" id="syllabus">
                 <a href="{{ '/pages/syllabus' | relative_url }}">Syllabus</a>
               </div>
-              <div class="nav-link" id="exercises">Exercises</div>
+              <!-- <div class="nav-link" id="exercises">Exercises</div> -->
               <div class="nav-link" id="people">
                 <a href="{{ '/pages/people' | relative_url }}">People</a>
               </div>
-              <div class="nav-link" id="projects">Projects</div>
-              <div class="nav-link" id="resources">Resources</div>
+              <!-- <div class="nav-link" id="projects">Projects</div> -->
+              <div class="nav-link" id="demos">
+                <a href="{{ '/pages/demos' | relative_url }}"> Demos</a>
+              </div>
+              <div class="nav-link" id="resources">
+                <a href="{{ '/pages/resources' | relative_url }}">Resources</a>
+              </div>
             </div>
             {% if page.url == '/pages/agenda.html' or page.url ==
             '/pages/syllabus.html' %}
@@ -46,7 +51,7 @@
           <div class="right-nav">
             <div>Instructor: Divya Mehra</div>
             <div>Email: dm4924@nyu.edu</div>
-            <div>GitHub, CodePen</div>
+            <!-- <div>GitHub, CodePen</div> -->
           </div>
         </div>
       </nav>
@@ -63,6 +68,9 @@
       <p>© {{ site.time | date: "%Y" }} {{ site.author }}</p>
     </footer> -->
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/title-page.js' | relative_url }}" type="module"></script>
+    <script
+      src="{{ '/assets/js/title-page.js' | relative_url }}"
+      type="module"
+    ></script>
   </body>
 </html>

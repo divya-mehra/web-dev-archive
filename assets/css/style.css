@@ -10,18 +10,20 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   font-size: 1rem;
+  letter-spacing: -0.2px;
 
-  background-color: #fdfbf3;
+  /* background-color: #fdfbf3; */
 }
 
 nav {
   box-sizing: border-box;
-  padding: 16px 24px;
+  padding: 24px 24px;
 }
 
 main {
   box-sizing: border-box;
   padding: 16px 24px;
+  padding-bottom: 144px;
 }
 
 /* Navigation */
@@ -110,24 +112,30 @@ a {
 /* Weeks */
 
 h1 {
-  font-family: monospace;
-  font-size: 4rem;
-  text-transform: uppercase;
+  font-family: Inter;
+  font-size: 3.5rem;
+  /* text-transform: uppercase; */
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   font-weight: 400;
   
 }
 
 h2 {
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-weight: 600;
   font-family: "Inter";
-  margin: 0;
+  /* margin: 0; */
+}
+
+h3 {
+  font-family: Inter;
 }
 
 h4 {
-  font-size: 1rem;
+  font-family: Inter;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -138,6 +146,10 @@ h4 {
 
 .inactive summary {
   cursor: default;
+}
+
+summary > h2 {
+  margin: 0;
 }
 
 /* Collapsible */
@@ -220,7 +232,32 @@ ul {
   display: grid;
   grid-template-columns: 2fr 1fr;
   column-gap: 48px;
+  /* row-gap: 8px; */
 }
 
+/* PAGE: DEMOS */
 
+.demo-section-nav > * {
+  padding: 24px 0;
+  padding-bottom: 32px;
+}
+
+.demo-section-codepen {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* PAGE: RESOURCES */
+
+.resource-section {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 16px 0;
+}
+
+.resource-section > * > * {
+  padding: 2px 0;
+}
 
