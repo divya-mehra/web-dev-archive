@@ -1,0 +1,39 @@
+.class-title {
+    font-size: 9rem;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+/* Effects */
+
+.letter {
+    transition: all .1s ease;
+    color: black;
+    transition: width 0.5s, height 0.5s, background-color 0.3s, border-radius 0.5s;
+
+}
+
+.neutral {
+    color: black;
+    background-color: none;
+}
+
+
+.rect {
+    background-color: black;
+    color: transparent;
+}
+
+.circle {
+    background-color: black;
+    border-radius: 50%;
+    color: transparent;
+}
