@@ -7,6 +7,14 @@
     align-items: center;
 }
 
+/* Mobile */
+
+@media (max-width: 768px) {
+    .hide-mobile {
+      display: none;
+    }
+  }
+
 body {
     height: 100vh;
     /* overflow: hidden; */
