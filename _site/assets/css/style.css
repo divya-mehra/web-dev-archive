@@ -26,6 +26,16 @@ main {
   padding-bottom: 144px;
 }
 
+a.external::after {
+  content: "↗";
+  margin-left: 4px;
+}
+
+.demo-section-nav > * > a::after {
+  content: "↓";
+  margin-left: 4px;
+}
+
 /* Navigation */
 
 /* .main-content {
@@ -218,6 +228,17 @@ summary::-webkit-details-marker {
 
 details {
   user-select: none;
+}
+
+/* Questions */
+
+.invisible {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.invisible:hover {
+  opacity: 1;
 }
 
 /* Lists */
