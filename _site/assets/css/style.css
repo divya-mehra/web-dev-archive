@@ -241,6 +241,18 @@ details {
   opacity: 1;
 }
 
+.redacted {
+  padding: 2px 8px;
+  background-color: black;
+  color: black;
+  transition: color 2s ease;
+  white-space:nowrap;
+}
+
+.redacted:hover {
+  color: white;
+}
+
 /* Lists */
 
 ul {
