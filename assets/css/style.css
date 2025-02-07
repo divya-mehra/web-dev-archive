@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prompt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prompt&display=swap");
 
 html,
 body {
@@ -6,7 +6,7 @@ body {
   font-family: "Inter";
   margin: 0;
   padding: 0;
-  
+
   height: 100%;
   box-sizing: border-box;
   max-width: 1200px;
@@ -29,8 +29,17 @@ main {
 }
 
 a.external::after {
-  content: "↗";
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-size: small;
+  font-weight: 800; */
+  content: "→";
+  display: inline-block;
+  transform: rotate(-45deg);
   margin-left: 4px;
+}
+
+a:hover {
+  color: blue;
 }
 
 .demo-section-nav > * > a::after {
@@ -80,7 +89,6 @@ a {
 .nav-links {
   display: flex;
   gap: 24px;
-  
 }
 
 .nav-link {
@@ -130,7 +138,6 @@ h1 {
   margin-top: 0;
   margin-bottom: 24px;
   font-weight: 400;
-  
 }
 
 h2 {
@@ -148,8 +155,19 @@ h3 {
 h4 {
   font-family: Inter;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
+}
+
+strong {
+  font-weight: 700;
+}
+
+code {
+  font-size: smaller;
+  border: 1px black solid;
+  border-radius: 4px;
+  padding: 2px;
 }
 
 .inactive {
@@ -248,7 +266,7 @@ details {
   background-color: black;
   color: black;
   transition: color 2s ease;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 .redacted:hover {
@@ -259,6 +277,8 @@ details {
 
 ul {
   padding-left: 8px;
+  margin: 8px;
+  line-height: 1.2;
 }
 
 /* PAGE: Agenda */
@@ -288,11 +308,10 @@ ul {
 .resource-section {
   display: flex;
   flex-direction: column;
-  
+
   padding: 16px 0;
 }
 
 .resource-section > * > * {
   padding: 2px 0;
 }
-
