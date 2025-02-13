@@ -13,6 +13,8 @@ body {
   font-size: 1rem;
   letter-spacing: -0.2px;
 
+  cursor: auto;
+
   /* background-color: #fdfbf3; */
 }
 
@@ -246,7 +248,7 @@ summary::-webkit-details-marker {
 }
 
 details {
-  user-select: none;
+  /* user-select: none; */
 }
 
 /* Questions */
