@@ -296,6 +296,10 @@ ul > * {
 }
 
 /* PAGE: DEMOS */
+.demo-section-nav  {
+  display: flex;
+  gap: 16px;
+}
 
 .demo-section-nav > * {
   padding: 24px 0;
@@ -306,6 +310,10 @@ ul > * {
   display: flex;
   flex-direction: column;
   gap: 64px;
+}
+
+#css-codepen {
+  padding-top: 64px;
 }
 
 /* PAGE: RESOURCES */
