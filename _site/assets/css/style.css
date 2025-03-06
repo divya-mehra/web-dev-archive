@@ -11,7 +11,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   font-size: 1rem;
-  letter-spacing: -0.2px;
+  /* letter-spacing: -0.05px; */
 
   cursor: auto;
 
@@ -327,4 +327,11 @@ ul > * {
 
 .resource-section > * > * {
   padding: 2px 0;
+}
+
+/* PAGE: PROJECTS */
+
+.project-section {
+  margin: 64px 0;
+  line-height: 1.15;
 }
