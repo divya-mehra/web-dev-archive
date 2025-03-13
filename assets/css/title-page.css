@@ -1,5 +1,5 @@
 .class-title {
-    font-size: 9em;
+    font-size: 9vw;
     font-family: monospace;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
 
 /* Mobile */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .hide-mobile {
       display: none;
     }
