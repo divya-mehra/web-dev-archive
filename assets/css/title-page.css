@@ -1,5 +1,6 @@
 .class-title {
-    font-size: 9vw;
+    font-size: clamp(7.5rem, 9vw, 8.5rem);
+    width: 100%; 
     font-family: monospace;
     display: flex;
     flex-direction: column;
