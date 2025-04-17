@@ -11,7 +11,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   font-size: 1rem;
-  /* letter-spacing: -0.05px; */
+  letter-spacing: 0.05px;
+  color:#191919;
 
   cursor: auto;
 
@@ -221,12 +222,6 @@ details summary h2::after {
   /* vertical-align: middle; */
 }
 
-.timeline {
-  font-size: 1.4rem;
-  margin: 8px 0;
-  visibility: hidden;
-}
-
 details[open] summary h2::after {
   content: "  -";
   font-size: 1.4rem;
@@ -345,5 +340,5 @@ ul > * {
 
 .project-section {
   margin: 64px 0;
-  line-height: 1.15;
+  line-height: 1.2;
 }
